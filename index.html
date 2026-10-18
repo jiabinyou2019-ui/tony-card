@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142747">
+<title>Tony Wu | Digital Business Card</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#edf1f6;color:#233047;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",Arial,sans-serif}
+.card{max-width:480px;margin:30px auto;background:white;border-radius:22px;overflow:hidden;box-shadow:0 12px 45px #10274718}
+.hero{background:linear-gradient(135deg,#102441,#244b70);color:white;padding:26px 26px 34px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:1px}
+.brand img{max-width:130px;max-height:45px;object-fit:contain}
+.lang{display:flex;gap:5px}
+.lang button{background:transparent;color:white;border:1px solid #ffffff70;padding:8px 12px;border-radius:20px;cursor:pointer}
+.lang button.active{background:white;color:#142747}
+h1{font-size:38px;margin:40px 0 5px}
+.role{color:#f3b78e;font-size:17px;font-weight:600}
+.company{font-size:13px;line-height:1.7;color:#e2e9f2;margin-top:12px}
+.body{padding:26px}
+h2{font-size:16px;color:#193b61;margin:28px 0 14px;border-bottom:1px solid #e6e9ef;padding-bottom:10px}
+.item{padding:10px 0;border-bottom:1px solid #f1f2f5;font-size:14px;line-height:1.6}
+.item:last-child{border-bottom:0}
+.contact{display:flex;align-items:flex-start;gap:13px;padding:14px 0;text-decoration:none;color:#233047;border-bottom:1px solid #edf0f3}
+.contact .ico{font-size:22px;color:#e46c35}
+.contact small{display:block;color:#8290a0;font-size:11px;margin-bottom:5px}
+.contact strong{font-size:14px;font-weight:500;overflow-wrap:anywhere}
+.qr{text-align:center;padding:20px;background:#f5f7fa;border-radius:15px}
+.qr img{width:180px;max-width:100%;background:white;border-radius:10px}
+.qr p{font-size:12px;color:#66758a}
+.actions{display:grid;gap:10px;margin-top:24px}
+.action{display:block;text-align:center;text-decoration:none;border:0;border-radius:12px;padding:15px;cursor:pointer;font-size:15px;font-weight:600}
+.primary{background:#e86832;color:white}
+.secondary{background:#eaf0f7;color:#193b61}
+.footer{text-align:center;color:#98a3b1;font-size:11px;padding:20px}
+@media(max-width:520px){.card{margin:0;min-height:100vh;border-radius:0}.hero{padding-top:25px}}
+</style>
+</head>
+<body>
+
+<div class="card">
+<header class="hero">
+  <div class="top">
+    <div class="brand">
+      <img src="tony_brand_logo.png" alt="Wanxiang Media"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none">WANXIANG MEDIA · CMTV</span>
+    </div>
+    <div class="lang">
+      <button id="enBtn" class="active" onclick="switchLang('en')">EN</button>
+      <button id="zhBtn" onclick="switchLang('zh')">中文</button>
+    </div>
+  </div>
+
+  <h1>Tony Wu</h1>
+  <div class="role" data-en="President" data-zh="主席">President</div>
+  <div class="company">Wanxiang Media · Canadian Multicultural TV (CMTV)</div>
+  <div class="company" data-en="Host, Tony Talks Vancouver" data-zh="《Tony Talks Vancouver》主持人">Host, Tony Talks Vancouver</div>
+</header>
+
+<main class="body">
+
+<h2 data-en="Media & Channels" data-zh="媒体及社交平台">Media & Channels</h2>
+<div class="item" data-en="Host, Tony Talks Vancouver" data-zh="《Tony Talks Vancouver》主持人">Host, Tony Talks Vancouver</div>
+<div class="item" data-en="Xiaohongshu & Video Channel: Tony in Vancouver" data-zh="小红书及视频号：Tony在温哥华">Xiaohongshu & Video Channel: Tony in Vancouver</div>
+<div class="item" data-en="OmniX Network · Tony in Vancouver · Tony Talks" data-zh="OmniX Network · Tony在温哥华 · Tony Talks">OmniX Network · Tony in Vancouver · Tony Talks</div>
+
+<h2 data-en="Professional & Community Affiliations" data-zh="社会职务及专业机构">Professional & Community Affiliations</h2>
+
+<div class="item" data-en="President, China–Canada Yunnan Cultural Exchange Association" data-zh="中加云南文化交流协会主席">President, China–Canada Yunnan Cultural Exchange Association</div>
+
+<div class="item" data-en="Vice Chair, Canada International Health Qigong Association" data-zh="加拿大国际健身气功协会副主席">Vice Chair, Canada International Health Qigong Association</div>
+
+<div class="item" data-en="Co-Chair, Canadian Chinese Community Alliance" data-zh="加拿大华人社区联盟联合主席">Co-Chair, Canadian Chinese Community Alliance</div>
+
+<div class="item" data-en="Executive President, Canada–Canada Trade Association" data-zh="Canada–Canada Trade Association 执行主席">Executive President, Canada–Canada Trade Association</div>
+
+<div class="item" data-en="Tourism Ambassador, Destination BC" data-zh="Destination BC 旅游大使">Tourism Ambassador, Destination BC</div>
+
+<div class="item" data-en="Deputy Secretary-General, Canada Stone Art Association" data-zh="加拿大石艺协会副秘书长">Deputy Secretary-General, Canada Stone Art Association</div>
+
+<h2 data-en="Contact Information" data-zh="联系方式">Contact Information</h2>
+
+<a class="contact" href="tel:+17787235657">
+  <span class="ico">☎</span>
+  <div>
+    <small data-en="PHONE · TAP TO CALL" data-zh="电话 · 点击拨打">PHONE · TAP TO CALL</small>
+    <strong>(778) 723-5657</strong>
+  </div>
+</a>
+
+<a class="contact" href="mailto:tonystudio345@gmail.com">
+  <span class="ico">✉</span>
+  <div>
+    <small data-en="EMAIL · TAP TO WRITE" data-zh="电子邮箱 · 点击发送">EMAIL · TAP TO WRITE</small>
+    <strong>tonystudio345@gmail.com</strong>
+  </div>
+</a>
+
+<a class="contact" href="https://www.google.com/maps/search/?api=1&query=204-6011+Westminster+Hwy+Richmond+BC+V7C+4R9" target="_blank" rel="noopener">
+  <span class="ico">⌖</span>
+  <div>
+    <small data-en="ADDRESS · OPEN MAP" data-zh="办公地址 · 点击导航">ADDRESS · OPEN MAP</small>
+    <strong>204-6011 Westminster Hwy, Richmond, BC V7C 4R9, Canada</strong>
+  </div>
+</a>
+
+<h2 data-en="Connect on WeChat" data-zh="微信联系">Connect on WeChat</h2>
+
+<div class="qr">
+  <img src="tony_wechat_qr.png" alt="WeChat QR Code">
+  <p data-en="Scan with WeChat to connect" data-zh="使用微信扫一扫，添加联系">Scan with WeChat to connect</p>
+</div>
+
+<div class="actions">
+  <button class="action primary" onclick="saveContact()" data-en="＋ Save Contact" data-zh="＋ 保存到手机通讯录">＋ Save Contact</button>
+  <a class="action secondary" href="mailto:tonystudio345@gmail.com" data-en="✉ Send Email" data-zh="✉ 发送邮件">✉ Send Email</a>
+</div>
+
+</main>
+
+<div class="footer">© Wanxiang Media · CMTV · Digital Business Card</div>
+</div>
+
+<script>
+function switchLang(lang){
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-en][data-zh]").forEach(el=>{
+    el.textContent = el.getAttribute("data-"+lang);
+  });
+  document.getElementById("enBtn").classList.toggle("active",lang==="en");
+  document.getElementById("zhBtn").classList.toggle("active",lang==="zh");
+}
+
+function saveContact(){
+  const note = [
+    "Host - Tony Talks Vancouver",
+    "President - China-Canada Yunnan Cultural Exchange Association",
+    "Vice Chair - Canada International Health Qigong Association",
+    "Co-Chair - Canadian Chinese Community Alliance",
+    "Executive President - Canada-Canada Trade Association",
+    "Tourism Ambassador - Destination BC",
+    "Deputy Secretary-General - Canada Stone Art Association"
+  ].join(" | ");
+
+  const vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:Wu;Tony;;;",
+    "FN:Tony Wu",
+    "ORG:Wanxiang Media",
+    "TITLE:President",
+    "TEL;TYPE=CELL:+17787235657",
+    "EMAIL;TYPE=INTERNET:tonystudio345@gmail.com",
+    "ADR;TYPE=WORK:;;204-6011 Westminster Hwy;Richmond;BC;V7C 4R9;Canada",
+    "NOTE:"+note,
+    "END:VCARD"
+  ].join("\r\n");
+
+  const blob = new Blob([vcard],{type:"text/vcard;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Tony_Wu_Contact.vcf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+</script>
+</body>
+</html>
